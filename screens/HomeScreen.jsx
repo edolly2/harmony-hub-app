@@ -5,8 +5,13 @@ const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome to Mental Health App</Text>
-      <Button title="View Tips" onPress={() => navigation.navigate("Tips")} />
       <Button
+        style={styles.button}
+        title="View Tips"
+        onPress={() => navigation.navigate("Tips")}
+      />
+      <Button
+        style={styles.button}
         title="7-Day Schedule"
         onPress={() => navigation.navigate("Schedule")}
       />
@@ -26,5 +31,8 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: "bold",
     marginBottom: 20,
+  },
+  button: {
+    padding: 95,
   },
 });
